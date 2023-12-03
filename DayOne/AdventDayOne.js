@@ -1,8 +1,7 @@
 const fs = require('fs');
 
 const file = fs.readFileSync('input.txt').toString();
-const arr = file.split('\n');
-
+const arr = file.split('\n').map(str => str.replace(/\r/g, ''));
 const numArr = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
 const strToIntMap = {
   one: '1',
